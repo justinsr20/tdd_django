@@ -8,7 +8,7 @@ node {
         sh 'docker build -t jenkins/django_app:v${BUILD_NUMBER} -t jenkins/django_app:latest .'
     }
 
-        stage('Build containter image') {
+    stage('Build containter image') {
         sh 'docker run jenkins/django_app /usr/src/app/run_tests.sh'
     }
 
