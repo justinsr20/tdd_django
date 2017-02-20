@@ -1,0 +1,7 @@
+version: '2'
+services:
+  web:
+    image: jenkins/django_app
+    command: python /usr/src/app/django_app/manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
