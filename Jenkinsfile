@@ -12,4 +12,8 @@ node {
         sh 'docker run jenkins/django_app /usr/src/app/run_tests.sh'
     }
 
+    stage('Run app') {
+            sh 'docker-compose up -d'
+    }
+
 }
